@@ -1,0 +1,36 @@
+{% load static %}
+<!-- Header Section -->
+  <header class="header">
+    <div class="container container--narrow">
+      <a href="{% url 'profiles' %}" class="header__logo">
+        <img src="{% static 'images/farm_logo.jpg' %}" alt="DevSearch Logo" />
+      </a>
+      <nav class="header__nav">
+        <input type="checkbox" id="responsive-menu" />
+        <label for="responsive-menu" class="toggle-menu">
+          <span>Menu</span>
+          <div class="toggle-menu__lines"></div>
+        </label>
+        <ul class="header__menu">
+          <li class="header__menuItem"><a href="{% url 'profiles' %}">Farmers</a></li>
+          <li class="header__menuItem"><a href=" {% url 'projects'%} ">Products</a></li>
+          <li class="header__menuItem"><a href="">Agents</a></li>
+           {% if request.user.is_authenticated %}
+                <li class="header__menuItem"><a href="{% url 'inbox' %}">Inbox</a></li>
+                <li class="header__menuItem"><a href="{% url 'account' %}">Account</a></li>
+                <li class="header__menuItem"><a href="{% url 'logout' %}" class="btn btn--sub">Logout</a></li>
+                {% else %}
+                <li class="header__menuItem"><a href="{% url 'login' %}" class="btn btn--sub">Sign in</a></li>
+              {% endif %}
+
+          <!-- THE HERE IS THE SNIPPET FOR CUSTOM BING SEARCH-->
+          <li class="header__menuItem"><a href="https://ui.customsearch.ai/hosted-page?customconfig=5cf9bf5c-74b3-4c75-8d3e-4ae25fb40b08&version=latest&market=en-US&q=" target = "blank" class="btn btn--sub">Search Bing</a></li>
+          <!-- THE SEARCH BAR FOR THE BING CUSTOM SEARCH
+            <form action="https://ui.customsearch.ai/hosted-page?customconfig=5cf9bf5c-74b3-4c75-8d3e-4ae25fb40b08&version=latest&market=en-US&q=" target="_blank">
+            <input name="q">
+          <button>Search</button>
+          </form> -->
+        </ul>
+      </nav>
+    </div>
+  </header>

@@ -1,0 +1,13 @@
+h1{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: skyblue;
+}
+
+image{
+    width: 10px;
+    height: 10px;
+}

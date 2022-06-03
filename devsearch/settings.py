@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,12 +27,13 @@ SECRET_KEY = 'django-insecure-_1*i2jxby&7zc4gl@8&1^%%k_$s*436izmsm0vot!0x1^m*avr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'agroservers.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'storages',
     'projects.apps.ProjectsConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -82,11 +84,23 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'agro_server',
+        'USER': 'agroserver',
+        'PASSWORD': '09095564929.mi',
+        'HOST': 'database-1.c9sailg2ycrg.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
+""""
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -150,3 +164,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_FILE_OVERWRITE = False
+AWS_ACCESS_KEY_ID = 'AKIAU2W3AN6JYVVFDGEL'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'agro-server'
+
+if os.getcwd() == '/app':
+    DEBUG = False

@@ -11,7 +11,7 @@
           <div class="card__body dev">
             <a class="tag tag--pill tag--main settings__btn" href="{% url 'edit-account' %}"><i class="im im-edit"></i>
               Edit</a>
-            <img class="avatar avatar--xl dev__avatar" src="{{profile.profile_image}}" />
+            <img class="avatar avatar--xl dev__avatar" src="{{profile.imageURL}}" />
             <h2 class="dev__name">{{profile.name}}</h2>
             <p class="dev__title">{{profile.short_intro}}</p>
             <p class="dev__location">Based in {{profile.location}}</p>
@@ -110,7 +110,7 @@
         <div class="settings">
           <h3 class="settings__title">Projects</h3>
           <a class="tag tag--pill tag--sub settings__btn tag--lg" href="{% url 'create-project' %}"><i
-              class="im im-plus"></i> Add Project</a>
+              class="im im-plus"></i> Add Products</a>
         </div>
 
         <table class="settings__table">

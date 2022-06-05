@@ -77,4 +77,11 @@ def deleteProject(request, pk):
     context = {'object': project}
     return render(request, 'delete_template.html', context)
 
+def about(request):
+    return render(request, 'about.html')
 
+def agents(request):
+    return render(request, 'agents.html')
+
+def team(request):
+    return render(request, 'team-template.html')

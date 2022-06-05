@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="team_container">
+    <div class="team_header">
+        <h1>veried Agents</h1>
+    </div>
+    <div class="sub-container">
+        <div class="teams">
+            <img src="{% static 'images/passport.jpg' %}" alt="">
+            <div class="name">Dauda Yusuf</div>
+            <div class="desig">Student at Abubakar Tafawa Balewa University </div>
+            <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
+
+            <div class="social-links">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="teams">
+            <img src="{% static 'images/default.jpg' %}" alt="">
+            <div class="name">Ameer Usman</div>
+            <div class="desig">Student</div>
+            <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="teams">
+            <img src="{% static 'images/default.jpg' %}" alt="">
+            <div class="name">Tahir Jeda </div>
+            <div class="desig">Manager</div>
+            <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+
+{% endblock content %}

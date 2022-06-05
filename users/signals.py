@@ -19,7 +19,7 @@ def createProfile(sender, instance, created, **kwargs):
 
         )
         
-        """
+       
         subject = "WELCOME TO AGRO-SERVER"
         message = "Thank you for joining us. Do have a quality and transparent services"
 
@@ -32,7 +32,7 @@ def createProfile(sender, instance, created, **kwargs):
 
 
         )
-       """
+       
 
 def updateUser(sender, instance, created, **kwargs):
     profile = instance

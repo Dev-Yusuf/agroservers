@@ -85,3 +85,6 @@ def agents(request):
 
 def team(request):
     return render(request, 'team-template.html')
+
+def ComingSoon(request):
+    return render(request, 'coming-soon.html')

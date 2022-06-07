@@ -847,15 +847,7 @@
     margin-top: 2rem;
   }
 
-   /*=======================
-    team section
-  ========================*/
-
-.team_container {
-    text-align: center;
-    background: #f5f5f5;
-}
-
+  
 .team_header {
     padding-top: 30px;
     color: #444;

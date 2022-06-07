@@ -10,6 +10,7 @@ urlpatterns =[
     path('delete-project/<str:pk>/', views.deleteProject, name = "delete-project"),
     path('about/', views.about, name = "about"),
     path('agents/', views.agents, name = "agents"),
-    path('team/', views.team, name = "team")
+    path('team/', views.team, name = "team"),
+    path('ComingSoon/', views.ComingSoon, name = "ComingSoon")
     
 ]

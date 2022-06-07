@@ -20,7 +20,7 @@ def createProfile(sender, instance, created, **kwargs):
         )
         
        
-        subject = "WELCOME TO AGRO-SERVER"
+        subject = "WELCOME TO AGRO-SERVER" 
         message = "Thank you for joining us. Do have a quality and transparent services"
 
         send_mail(

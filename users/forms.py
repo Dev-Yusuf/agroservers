@@ -11,7 +11,8 @@ class CustomUserCreationForm(UserCreationForm):
             'first_name', 'email', 'username', 'password1', 'password2'
         ]
         labels = {
-            'first_name': 'Name'
+            'first_name': 'Name',
+           
         }
 
 # this block of code loops through the fields and style them based of the class picked by css
@@ -24,7 +25,7 @@ class CustomUserCreationForm(UserCreationForm):
 class profileForm(ModelForm):
     class Meta:
         model = Profile
-        fields = ['name', 'email', 'username', 'profile_image', 'location', 'bio', 'short_intro', 'social_github', 'social_linkedin', 'social_youtube', 'social_website']
+        fields = ['name', 'email', 'username', 'profile_image', 'location', 'bio', 'short_intro', 'social_github', 'social_linkedin', 'social_youtube', 'social_website', 'number']
 
 
 

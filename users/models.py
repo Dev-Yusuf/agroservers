@@ -29,7 +29,7 @@ class Profile(models.Model):
         return str(self.user.username)
 
     class Meta:
-        ordering = ['created']
+        ordering = ['-created']
 
 
     @property
